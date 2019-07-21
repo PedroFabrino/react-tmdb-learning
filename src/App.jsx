@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import MoviesApp from "./"
+import axios from "axios";
+import MovieList from "./Movies/MovieList.jsx";
+import TextField from "@material-ui/core/TextField";
 
 const apiPath = "https://api.themoviedb.org/3";
 const apiKey = "";
