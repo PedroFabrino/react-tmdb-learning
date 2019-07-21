@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import MovieList from "./MovieList.jsx";
+import MovieList from "./Movies/MovieList.jsx";
 import TextField from "@material-ui/core/TextField";
 
 const apiPath = "https://api.themoviedb.org/3";
-const apiKey = "27b18f1605a11fccfe1b2c9085bc3006";
+const apiKey = "";
 
 function App() {
 	useEffect(() => {
