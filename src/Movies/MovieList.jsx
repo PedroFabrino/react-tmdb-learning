@@ -6,7 +6,6 @@ const MovieListComponent = styled.div`
 	display: grid;
 	justify-items: stretch;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
 	grid-gap: 20px;
 	padding-top: 15px;
 `;

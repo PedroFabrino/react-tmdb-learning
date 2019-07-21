@@ -16,6 +16,7 @@ const MovieCard = styled.div.attrs(props => ({
 	background-position: center center;
 	position: relative;
 	overflow: hidden;
+	height: 300px;
 	:hover {
 		cursor: pointer;
 	}
@@ -31,6 +32,7 @@ const MovieCard = styled.div.attrs(props => ({
 			&_name {
 				font-size: 1.5em;
 				margin-right: 1em;
+				max-width: 70%;
 			}
 			display: flex;
 			justify-content: space-between;
@@ -39,14 +41,14 @@ const MovieCard = styled.div.attrs(props => ({
 			flex-shrink: 0;
 			padding-bottom: 0.5em;
 			&_rating {
-				align-items: center;
+				align-items: flex-start;
 			}
 		}
 
 		.description {
 			flex-grow: 1;
 			display: flex;
-			align-items: center;
+			align-items: flex-end;
 		}
 
 		.release-date {
@@ -90,7 +92,7 @@ export default function Movie({
 			<div className="content">
 				<div className="title">
 					<span className="title_name">{title}</span>
-					<div className="title_rating" data-tip={vote_average}>
+					<div className="title_rating" data-tip={`${vote_average}`}>
 						<StarRatingComponent
 							name="rate"
 							starCount={5}
