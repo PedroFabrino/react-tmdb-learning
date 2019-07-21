@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import MoviesApp from "./"
+import axios from "axios";
+import MovieList from "./Movies/MovieList.jsx";
+import TextField from "@material-ui/core/TextField";
 
 const apiPath = "https://api.themoviedb.org/3";
 const apiKey = "";
 
-function App() {
+function MovviesApp() {
 	useEffect(() => {
 		axios
 			.get(`${apiPath}/discover/movie?api_key=${apiKey}`)
@@ -45,10 +47,10 @@ function App() {
 							.includes(filter && filter.toLowerCase())
 					)
 				}
-				handleClick={() => handleClick}
+				handleClick={handleClick}
 			/>
 		</>
 	);
 }
 
-export default App;
+export default MovviesApp;
