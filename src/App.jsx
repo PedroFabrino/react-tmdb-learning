@@ -32,7 +32,6 @@ function App() {
 		axios
 			.get(`${apiPath}/discover/movie?api_key=${apiKey}&page=${page}`)
 			.then(response => {
-				setError(undefined);
 				setMovies((movies) => movies.concat(response.data.results));
 			})
 			.catch(error => {
