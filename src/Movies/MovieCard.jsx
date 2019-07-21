@@ -79,13 +79,13 @@ export default function Movie({
 	adult,
 	overview,
 	release_date,
-	onClick
+	handleClick
 }) {
 	return (
 		<MovieCard
 			className="movie-card"
-			backdrop={backdrop_path}
-			onClick={() => onClick(id)}
+			backdrop={backdrop_path ? backdrop_path : poster_path}
+			onClick={() => handleClick(id)}
 		>
 			<div className="content">
 				<div className="title">
